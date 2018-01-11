@@ -1,3 +1,7 @@
+* {
+     box-sizing: border-box;
+}
+
 /* applies to anything of class "example-class-selector" */
 .example-class-selector {
 	margin-top: 2em;
@@ -7,13 +11,6 @@
 .example-class-selector p {
 	/* Colors are in hexadecimal: http://www.colorpicker.com/ */
 	color: #CC00AA;
-}
-
-/* this style exists to make it obvious that you've successfully linked
-   the CSS to the page. feel free to remove it once the link is working. */
-body {
-     border: 1px dotted gray;
-     padding: 20px;
 }
 
 .jumbotron {
@@ -33,6 +30,45 @@ body {
      z-index: -1;
 }
 
+html {
+     font-family: sans-serif;
+}
+
+h4 {
+     margin-bottom: 20px;
+}
+
+h4, .project {
+     width: 520px;
+     margin-left: auto;
+     margin-right: auto;
+}
+
 .project {
-     margin-left: 20px;
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+     transition: 0.1s;
+}
+
+.project + .project {
+     margin-top: 20px;
+}
+
+.project>a {
+     text-align: center;
+     text-decoration: none;
+}
+
+.project>a>p {
+     font-weight: 600;
+}
+
+.project:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.header {
+     text-align: center;
 }
